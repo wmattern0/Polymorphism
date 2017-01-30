@@ -1,6 +1,8 @@
 package io.zipcoder.pets;
 
 import java.util.ArrayList;
+import java.util.HashMap;
+import java.util.Map;
 import java.util.Scanner;
 
 /**
@@ -13,14 +15,15 @@ public class Pets1 {
     public static void main(String[] args) {
         System.out.println("How many pets do you have?");
         numberOfPets = scanner.nextInt();
-        ArrayList<String> petNamesList = new ArrayList<String>(numberOfPets);
+        Map<String,String> petNamesAndType = new HashMap<String,String>();
         for (int i = 1; i <= numberOfPets; i++) {
             System.out.println("What is the name of pet number " + i + "?");
             String currentPetName = scanner.next();
-            petNamesList.add(currentPetName);
+            System.out.println("What is the type of pet number " + i + "?");
+            String currentPetType = scanner.next();
+            petNamesAndType.put(currentPetName,currentPetType);
         }
-        System.out.println(petNamesList.toString());
-
+        System.out.println(petNamesAndType.toString());
     }
 
 }
