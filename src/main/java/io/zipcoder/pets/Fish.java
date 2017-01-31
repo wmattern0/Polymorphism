@@ -6,7 +6,7 @@ package io.zipcoder.pets;
 public class Fish extends Pet{
 
     @Override
-    public void speak() {
-        System.out.println("Blubblub");
+    public String speak() {
+        return "Blub...\nBlub...";
     }
 }

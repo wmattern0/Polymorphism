@@ -7,8 +7,8 @@ public class Pet {
 
     String name;
 
-    public void speak(){
-        System.out.println("The generic pet says: grrrrrrrrr");
+    public String speak(){
+        return "The generic pet says: grrrrrrrrr";
     }
 
     public String getName() {
