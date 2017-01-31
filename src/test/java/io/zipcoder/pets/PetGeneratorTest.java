@@ -36,4 +36,20 @@ public class PetGeneratorTest {
     }
 
 
+    @Test
+    public void petGeneratorDinoTest(){
+        Pet denver = p.createPet("Denver","Dino");
+        String actual = denver.speak();
+        String expected = "Roar";
+        Assert.assertEquals(expected, actual);
+    }
+
+    @Test
+    public void petGeneratorPetTest(){
+        Pet nemo = p.createPet("Nemo","Fish");
+        String actual = nemo.speak();
+        String expected = "Grr";
+        Assert.assertEquals(expected, actual);
+    }
+
 }

@@ -9,6 +9,7 @@ public class PetGenerator {
         switch(type){
             case "Dog": return new Dog(name);
             case "Cat": return new Cat(name);
+            case "Dino": return new Dino(name);
             default:return new Pet(name);
         }
 
