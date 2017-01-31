@@ -13,7 +13,7 @@ public class Pet {
     }
 
     public String speak(){
-        return "The generic pet says: grrrrrrrrr";
+        return "A generic pet says grrrr";
     }
 
     public String getName() {

@@ -10,7 +10,7 @@ import java.util.Scanner;
  */
 public class PetsLevel3 {
     static Scanner scanner = new Scanner(System.in);
-    static List<Pet> petsList = new ArrayList<Pet>();
+    static List<Pet> petsList = new ArrayList<>();
     static HashMap<String,String> namesAndSpeakOutputs= new HashMap<>();
     static int numberOfPets;
     static PetFactory petFactory = new PetFactory();
@@ -29,6 +29,5 @@ public class PetsLevel3 {
             namesAndSpeakOutputs.put(p.getName(),p.speak());
         }
         System.out.println(namesAndSpeakOutputs.toString());
-
     }
 }
