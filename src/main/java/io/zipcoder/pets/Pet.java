@@ -6,6 +6,12 @@ package io.zipcoder.pets;
 public class Pet {
     String name;
 
+    Pet(){}
+
+    Pet(String name){
+        this.name = name;
+    }
+
     public String getName() {
         return name;
     }
@@ -13,8 +19,6 @@ public class Pet {
     public void setName(String name) {
         this.name = name;
     }
-
-
 
     public String speak(){
         return "Grr";
