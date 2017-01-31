@@ -11,6 +11,10 @@ public class PetDataWarehouse {
     PetGenerator petGen = new PetGenerator();
 
     public void addPetToPetsList(String name, String type){
-        return;
+        petsList.add(new Pet());
+    }
+
+    public Pet getPet(int index){
+        return petsList.get(index);
     }
 }
