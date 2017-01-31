@@ -24,7 +24,9 @@ public class PetsLevel3 {
             System.out.println("What is the type of pet number " + i + "?");
             String currentPetType = scanner.next();
             petsList.add(petFactory.setPet(currentPetType, currentPetName));
-            namesAndSpeakOutputs.put(petsList.get(i-1).getName(),petsList.get(i-1).speak());
+        }
+        for (Pet p: petsList){
+            namesAndSpeakOutputs.put(p.getName(),p.speak());
         }
         System.out.println(namesAndSpeakOutputs.toString());
 
