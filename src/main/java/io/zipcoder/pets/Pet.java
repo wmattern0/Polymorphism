@@ -5,7 +5,7 @@ import java.util.Comparator;
 /**
  * Created by williammattern on 1/31/17.
  */
-public class Pet implements Comparable{
+public class Pet implements Comparable<Pet>{
     String name;
 
     Pet(){}
@@ -27,7 +27,7 @@ public class Pet implements Comparable{
     }
 
     @Override
-    public int compareTo(Object p) {
-        return this.getName().compareTo(p.getClass().getName());
+    public int compareTo(Pet p) {
+        return this.getName().compareTo(p.getName());
     }
 }
