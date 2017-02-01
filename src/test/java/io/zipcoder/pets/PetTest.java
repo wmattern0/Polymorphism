@@ -44,4 +44,20 @@ public class PetTest {
         assertEquals(expected,actual);
     }
 
+    @Test
+    public void petComparatorTestAgain(){
+        turbo = new Pet("Turbo");
+        Pet turbs = new Pet("Turbs");
+        int expected = 1, actual = turbs.compareTo(turbo);
+        assertEquals(expected,actual);
+    }
+
+    @Test
+    public void petComparatorTestEquivalent(){
+        turbo = new Pet("Turbo");
+        Pet turbs = new Pet("Turbo");
+        int expected = 0, actual = turbs.compareTo(turbo);
+        assertEquals(expected,actual);
+    }
+
 }
