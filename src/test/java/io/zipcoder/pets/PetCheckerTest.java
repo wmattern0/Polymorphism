@@ -1,6 +1,9 @@
 package io.zipcoder.pets;
 
+import org.junit.Before;
 import org.junit.Test;
+
+import java.util.ArrayList;
 
 import static org.junit.Assert.*;
 
@@ -8,9 +11,16 @@ import static org.junit.Assert.*;
  * Created by williammattern on 2/1/17.
  */
 public class PetCheckerTest {
-    PetChecker petChecker = new PetChecker();
+    PetChecker petChecker;
     Pet turbo;
     Pet turbo2;
+
+    @Before
+    public void setUp() {
+        petChecker = new PetChecker();
+    }
+
+
 
     @Test
     public void compareTestEquivalent(){

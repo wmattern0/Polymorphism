@@ -1,5 +1,8 @@
 package io.zipcoder.pets;
 
+import java.util.ArrayList;
+import java.util.Arrays;
+import java.util.Collections;
 import java.util.Comparator;
 
 /**
@@ -7,8 +10,18 @@ import java.util.Comparator;
  */
 public class PetChecker implements Comparator<Pet>{
 
-    @Override
-    public int compare(Pet pet1, Pet pet2) {
-        return pet1.compareTo(pet2);
+    public int compare(Pet pet1, Pet pet2){
+        if (pet1.getClass().toString().compareTo(pet2.getClass().toString()) > 0){
+            return 1;
+        } else if (pet1.getClass().toString().compareTo(pet2.getClass().toString()) < 0){
+            return -1;
+        } else {
+            if (pet1.getName().compareTo(pet2.getName()) > 0){
+                return 1;
+            } else if (pet1.getName().compareTo(pet2.getName()) < 0){
+                return -1;
+            }
+            return 0;
+        }
     }
 }

@@ -26,14 +26,12 @@ public class Pet implements Comparable<Pet>{
         return "Grr";
     }
 
-    @Override
-    public int compareTo(Pet p) {
-        if(this.getName().compareTo(p.getName()) == 0){
-            return 0;
-        } else if (this.getName().compareTo(p.getName()) > 0){
-            return 1;
-        } else {
-            return -1;
+    public int compareTo(Pet p){
+        int z = this.getName().compareTo(p.getName());
+        if(z == 0){
+            int y = this.getClass().toString().compareTo(p.getClass().toString());
+            return y;
         }
+        return z;
     }
 }
